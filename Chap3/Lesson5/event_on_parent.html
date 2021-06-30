@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_on_parent.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//親セレクタの中の子セレクタ（id="click_btn）にイベントを付ける
+	$("#parent_area").on("click","#click_btn",function(){
+		alert("イベントが実行されました");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div id="parent_area">
+	<button>ここはNG</button>
+	<button id="click_btn">ここをクリック</button>
+	<button>ここはNG</button>
+</div>
+</body>

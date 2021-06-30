@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_window.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//表示されているURLを取得
+	$("body").append("<p>表示されているページのURL："+window.location+"</p>");
+
+	//ブラウザ画面の拡縮率（1.0=100%の表記　※確認には変更後にリロードが必要）
+	$("body").append("<p>ブラウザ画面の拡縮率："+window.devicePixelRatio+"</p>");
+
+	//ウィンドウ内の横幅
+	$("body").append("<p>ウインドウ横幅："+window.innerWidth+"</p>");
+
+	//ウィンドウ内の縦幅
+	$("body").append("<p>ウインドウ縦幅："+window.innerHeight+"</p>");
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+</body>
+</html>

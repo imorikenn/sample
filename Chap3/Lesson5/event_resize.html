@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_resize.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//Windowをリサイズした時点で文字の色が赤に変更される
+	$(window).resize(function(){
+		$("h1").css("color","#f00");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<h1>リサイズ</h1>
+</body>
+</html>

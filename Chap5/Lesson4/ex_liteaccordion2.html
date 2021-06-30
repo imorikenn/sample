@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex_liteaccordion.html</title>
+<link href="liteAccordion-master/css/liteaccordion.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="liteAccordion-master/js/jquery.easing.1.3.js"></script>
+<script src="liteAccordion-master/js/liteaccordion.jquery.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//liteAccordion表示：初期設定
+$('#contents').liteAccordion({
+	onTriggerSlide : function() {
+		this.find('figcaption').fadeOut();
+	},
+	onSlideAnimComplete : function() {
+		this.find('figcaption').fadeIn();
+	},
+	autoPlay : true,	//自動スクロール
+	slideSpeed : 1000,	//スライドの移動スピード［1000=1秒］
+	theme : 'dark',	//light,dark,basic,stitch［デフォルト=stitch］
+	cycleSpeed : 3000,	//スライドの回転スピード［3000=3秒］
+	enumerateSlides : true	//アコーディオンバーのスライド番号表示
+	}).find('figcaption:first').show();
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<h1>liteAccordionライブラリ</h1>
+<div id="contents">
+<ol>
+<!-- page1 -->
+<li>
+	<h2><span>Slide One</span></h2>
+	<div>
+	<figure>
+		<img src="liteAccordion-master/img-demo/1.jpg" alt="image" />
+		<figcaption class="ap-caption">Slide One</figcaption>
+	</figure>
+	</div>
+</li>
+<!-- page1 -->
+
+<!-- page2 -->
+<li>
+	<h2><span>Slide Two</span></h2>
+	<div>
+	<figure>
+		<img src="liteAccordion-master/img-demo/2.jpg" alt="image" />
+		<figcaption class="ap-caption">Slide Two</figcaption>
+	</figure>
+	</div>
+</li>
+<!-- page2 -->
+
+<!-- page3 -->
+<li>
+	<h2><span>Slide Three</span></h2>
+	<div>
+	<figure>
+		<img src="liteAccordion-master/img-demo/3.jpg" alt="image" />
+		<figcaption class="ap-caption">Slide Three</figcaption>
+	</figure>
+	</div>
+</li>
+<!-- page3 -->
+
+<!-- page4 -->
+<li>
+	<h2><span>Slide Four</span></h2>
+	<div>
+	<figure>
+		<img src="liteAccordion-master/img-demo/4.jpg" width="768" alt="image" />
+		<figcaption class="ap-caption">Slide Four</figcaption>
+	</figure>
+	</div>
+</li>
+<!-- page4 -->
+
+<!-- page5 -->
+<li>
+	<h2><span>Slide Five</span></h2>
+	<div>
+	<figure>
+		<img src="liteAccordion-master/img-demo/5.jpg" alt="image" />
+		<figcaption class="ap-caption">Slide Five</figcaption>
+	</figure>
+	</div>
+</li>
+<!-- page5 -->
+
+<!-- page6 -->
+<li>
+	<h2><span>Slide Six</span></h2>
+	<div>
+	<figure>
+		<img src="liteAccordion-master/img-demo/3.jpg" alt="image" />
+		<figcaption class="ap-caption">Slide Six</figcaption>
+	</figure>
+	</div>
+</li>
+<!-- page6 -->
+</ol>
+</div>
+</body>
+</html>

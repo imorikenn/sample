@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selecter6.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//$("要素名, #id名")に対してstyle="color:#f00;"を設定
+$("div, #test").css("color","#f00");	//文字を赤色に
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<!-- div要素もしくは#testに対してのみ、赤色のスタイルが設定される -->
+<div>div要素</div>
+<p id="test">p要素のid属性=”test”</p>
+<!-- #no2に対しては、赤色のスタイルが設定されない -->
+<p id="no2">p要素のid属性=”no2”</p>
+</body>
+</html>

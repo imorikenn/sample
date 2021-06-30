@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_focus.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//セレクタにフォーカスが当たったタイミングで処理を実行
+	$("#name").focus(function(){
+		alert("名前フィールドにフォーカスが当たりました。");
+	});
+	$("#email").focus(function(){
+		alert("Emailフィールドにフォーカスが当たりました。");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<p>名前：<input type="text" id="name" value="ここをクリックしてフォーカスを当てます"></p>
+<p>Email：<input type="text" id="email" value="ここをクリックしてフォーカスを当てます"></p>
+</body>
+</html>

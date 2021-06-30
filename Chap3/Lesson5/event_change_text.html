@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_change_text.html</title>
+<style>input{width:300px;}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="click_btn"に変更があったら処理を実行
+	$("#change_text").change(function(){
+		alert("チェンジ、テキスト");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<p>
+TextBoxに文字を入力したら、何もない箇所をクリックしてね！<br>
+<input type="text" id="change_text" placeholder="例）12345">
+</p>
+</body>
+</html>

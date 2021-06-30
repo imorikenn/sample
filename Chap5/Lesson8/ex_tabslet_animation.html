@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex_tabslet_animation.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="./Tabslet-master/jquery.tabslet.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+$('.tabs').tabslet({
+	mouseevent: 'click',	//マウスクリックイベントの設定
+	attribute: 'href',	//イベント［タブとコンテンツの関連付け］
+	animation: true	//アニメーションフラグ［ON=true、OFF=false］
+});
+
+//この中に処理を記述 終了
+});
+</script>
+<link rel="stylesheet" href="./Tabslet-master/demo/stylesheets/reset.css">
+<link rel="stylesheet" href="./Tabslet-master/demo/stylesheets/styles.css">
+<link rel="stylesheet" href="./Tabslet-master/demo/stylesheets/typography.css">
+</head>
+<body>
+<h1>Tabslet_Animation</h1>
+<!-- Tabslet -->
+<h2>Animation</h2>
+<div class='tabs tabs_animate'>
+	<ul class='horizontal'>
+		<li><a href="#tab-1">コンテンツ１</a></li>
+		<li><a href="#tab-2">コンテンツ２</a></li>
+		<li><a href="#tab-3">コンテンツ３</a></li>
+	</ul>
+	<div id='tab-1'><h3>コンテンツ１を選択。</h3></div>
+	<div id='tab-2'><h3>コンテンツ２を選択。</h3></div>
+	<div id='tab-3'><h3>コンテンツ３を選択。</h3></div>
+</div>
+<!-- Tabslet -->	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate1-6.html</title>
+<style>div{height: 80px; width: 80px; background-color: #e8f836}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="move_box"をマージンレフト600pxまで移動と縦横減少
+	$("#move_box").animate(
+	{
+		//CSSプロパティ指定
+		"marginLeft" : "600px"
+	},
+	{
+		//何秒かけてアニメーションさせるかを指定できる
+		duration: 6000
+	}
+	);
+
+	//STOPボタンイベント［停止後、最後まで移動する］
+	$("#stop_end").on("click",function(){
+		$("#move_box").stop();
+	});
+	//STOPボタンイベント［停止後、その場所に止まる］
+	$("#stop_move").on("click",function(){
+		$("#move_box").stop(false,true);
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<button id="stop_end">停止 → ストップ</button>
+<button id="stop_move">停止 → 最後へ移動</button>
+<div id="move_box"></div>
+</body>
+</html>

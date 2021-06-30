@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_off_click.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="click_btn"をクリックしたら中のoffイベントでイベント削除
+	$("#click_btn").on("click",function(){
+		alert("イベントが実行されました");
+
+	//クリックをイベント削除（2回目からクリックしても反応なし）
+	$("#click_btn").off("click");
+		alert("イベントが削除されました");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<button id="click_btn">ここをクリック</button>
+</body>
+</html>

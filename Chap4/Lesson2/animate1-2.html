@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate1-2.html</title>
+<style>div{height: 300px; width: 300px; background-color: #e8f836}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="move_box"をマージンレフト600pxまで移動と縦横減少
+	$("#move_box").animate({
+		"marginLeft" : "600px",
+		"width" : "30px",
+		"height" : "30px"
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div id="move_box"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>event_touch.html</title>
+<style>body{height: 1000px; width: 100%; background-color: #000; color:#fff; font-size:16px}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//touchstart［タッチした最初にイベントが発生］
+	$("body").on("touchstart",function(){
+		$(this).append("<p>TouchStart</p>");
+	});
+
+	//touchmove［タッチしながら移動しているときにイベントが発生］
+	$("body").on("touchmove",function(){
+		$(this).append("<p>touchmove...</p>");
+	});
+
+	//touchend［タッチを離した時にイベントが発生］
+	$("body").on("touchend",function(){
+		$(this).append("<p>TouchEnd</p>");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<h1>タッチテスト（スマートフォンで確認）</h1>
+</body>
+</html>

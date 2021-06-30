@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_hover.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="click_btn"にマウスを上にのせたとき
+	$("#click_btn").hover(
+		function(){	//マウスを上にのせた
+			$("#description").css("color","red");
+		},
+		function(){	//マウスが上から外れた
+			$("#description").css("color","black");
+		}
+	);
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<button id="click_btn">ここをマウスオーバーする</button>
+<p id="description">マウスが上にのったら赤文字、上から外れたら黒文字</p>
+</body>
+</html>

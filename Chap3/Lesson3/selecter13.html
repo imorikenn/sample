@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selecter13.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//$("要素名:even")に対してstyle="color:#f00;"を設定
+$("p:even").css("color","#f00");	//文字を赤色に
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div>
+<!-- p要素の偶数番目の要素に対してのみ、赤色のスタイルが設定される -->
+	<p>0番目のp要素</p>
+	<p>1番目のp要素</p>
+	<p>2番目のp要素</p>
+	<p>3番目のp要素</p>
+	<p>4番目のp要素</p>
+	<p>5番目のp要素</p>
+</div>
+</body>
+</html>

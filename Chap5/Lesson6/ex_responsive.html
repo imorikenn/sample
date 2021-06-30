@@ -1,0 +1,26 @@
+<head>
+<meta charset="UTF-8">
+<title>Responsive Nav（IE対応）</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="responsive-nav/styles.css">
+<!--[if lte IE 8]><script src="responsive-nav/respond.js"></script><![endif]-->
+<script src="responsive-nav/responsive-nav.min.js"></script>
+</head>
+<body>
+<div id="nav">
+	<ul>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Projects</a></li>
+	<li><a href="#">Blog</a></li>
+	</ul>
+</div>
+<button id="nav-toggle">Menu</button>
+
+<script>
+	var navigation = responsiveNav("#nav", {
+	customToggle: "#nav-toggle"
+	});
+</script>
+</body>
+</html>

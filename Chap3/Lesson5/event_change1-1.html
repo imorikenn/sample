@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_change1-1.html</title>
+<style>input{width:300px;}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="click_btn"に変更があったら処理を実行
+	$("#change_sct").change(function(){
+		alert("チェンジ");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<p>
+<!--
+同じ値をセレクトした場合は変更がないため、changeイベントは動作しません
+-->
+<select id="change_sct">
+	<option value="1">よい子はほかを選択してね１</option>
+	<option value="2">よい子はほかを選択してね２</option>
+	<option value="3">よい子はほかを選択してね３</option>
+	<option value="4">よい子はほかを選択してね４</option>
+	<option value="5">よい子はほかを選択してね５</option>
+	<option value="6">よい子はほかを選択してね６</option>
+</select>
+</p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="jquery-toggles-master/css/toggles-full.css">
+<title>ex_toggle.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="jquery-toggles-master/toggles.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//トグルの表示設定
+$(".toggle").toggles({
+	clicker: $("h1"),
+	click: true,	//クリックで切り替え
+	height: 50	//トグルボタンの高さ
+});
+
+//この中に処理を記述 終了
+});
+</script>
+<style>
+#toggle{
+	width: 300px;	/* toggleの横幅 */
+	text-align: center;	/* on／offの文字の位置 */
+	}
+</style>
+</head>
+<body>
+<div id="content">
+<h1>Toggleライブラリ基礎</h1>
+<!-- トグルボタン -->	
+<div id="toggle" class="toggle-soft">
+	<div class="toggle toggle-select" data-type="select"></div>
+</div>
+<!-- /トグルボタン -->
+</div>
+</body>
+</html>

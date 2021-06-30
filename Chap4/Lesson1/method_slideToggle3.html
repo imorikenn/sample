@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>method_slideToggle3.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	$("#toggle_btn").on("click",function(){
+		$("#hide_area1").slideToggle();	//即座に表示・非表示
+		$("#hide_area2").slideToggle('slow');	//スローで表示・非表示
+		$("#hide_area3").slideToggle(2000); 	//2秒かけて表示・非表示
+	});
+//この中に処理を記述 終了
+});
+</script>
+<style>
+div{float: left;}
+#hide_area1{display: none; width: 300px; height: 500px; background-color: #5ab270;}
+#hide_area2{display: none; width: 300px; height: 500px; background-color: #e53131;}
+#hide_area3{display: none; width: 300px; height: 500px; background-color: #987cff;}
+</style>
+</head>
+<body>
+<div><button id="toggle_btn">表示 or 非表示</button></div>
+<div id="hide_area1"></div>
+<div id="hide_area2">’slow’</div>
+<div id="hide_area3">2秒</div>
+</body>
+</html>

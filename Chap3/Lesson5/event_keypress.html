@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_keypress.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//キーボードを押したイベント
+	$("body").keypress(function(){
+		alert("キーボードが押された");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<p>キーボードを押して見よう！</p>
+</body>
+</html>

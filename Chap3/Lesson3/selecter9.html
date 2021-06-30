@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selecter9.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//$(".Class名1 .Class名2")に対してstyle="color:#f00;"を設定
+$(".test .demo").css("color","#f00");	//文字を赤色に
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div class="test">
+<!-- .testの子要素.demoに対してのみ、赤色のスタイルが設定される -->
+	<div class="demo">これはclass属性”test”の子要素（クラス名demo）</div>
+	<p>これはclass属性”test”の子要素（クラス名なし）</p>
+	<div class="demo">これはclass属性”test”の子要素（クラス名demo）</div>
+	<p>これはclass属性”test”の子要素（クラス名なし）</p>
+</div>
+</body>
+</html>

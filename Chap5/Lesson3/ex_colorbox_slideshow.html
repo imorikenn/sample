@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex_colorbox_slideshow.html</title>
+<link rel="stylesheet" href="colorbox-master/colorbox.css">
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="colorbox-master/jquery.colorbox-min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//画像表示：初期設定
+$(".colorbox").colorbox({
+	rel: 'colorbox',	//colorboxがグループ化されるため、画面に［次へ・戻る］ボタン表示される
+	transition: "elastic",	//["elastic","fade","none"]、デフォルト＝elastic
+	speed: 400,	//写真表示スピード（切替）
+	opacity: 0.85,	//背景の透明度[0...1]、デフォルト=0.85
+	slideshow: true,	//写真をスライドショーのように動作させる
+	slideshowSpeed: 3000	//デフォルト=2500（2.5秒）
+});
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div id="content">
+<h1>colorboxライブラリ</h1>
+<!-- Popup画像 -->
+<div style="width:600px;">
+	<p><a class="colorbox" href="colorbox-master/content/ohoopee1.jpg" title="写真１">DEMO 1</a></p>
+	<p><a class="colorbox" href="colorbox-master/content/ohoopee2.jpg" title="写真２">DEMO 2</a></p>
+	<p><a class="colorbox" href="colorbox-master/content/ohoopee3.jpg" title="写真３">DEMO 3</a></p>
+</div>
+<!-- Popup画像 -->
+</div>
+</body>
+</html>

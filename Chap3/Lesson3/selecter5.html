@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selecter5.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//$("すべての要素")に対してstyle="color:#f00;"を設定
+$("*").css("color","#f00");	//文字を赤色に
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div>
+	<p>すべての要素が対象になる（div要素のなかのp要素）</p>
+	<p>すべての要素が対象になる（div要素のなかのp要素）</p>
+	<p>すべての要素が対象になる（div要素のなかのp要素）</p>
+	<p>すべての要素が対象になる（div要素のなかのp要素）</p>
+</div>
+<p>すべての要素が対象になる（p要素）</p>
+<ul>
+	<li>すべての要素が対象になる（ul要素のなかのli要素）</li>
+	<li>すべての要素が対象になる（ul要素のなかのli要素）</li>
+</ul>
+</body>
+</html>

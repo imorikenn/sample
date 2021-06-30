@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate1-4.html</title>
+<style>div{height: 50px; width: 50px;}</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+$("#move_box_top").animate(
+	{
+		"marginLeft" : "600px"
+	},
+	{
+		duration: 1500,	//最後に「,」（カンマ）を忘れずに入れる
+		easing: "swing"	//徐々に加速したのち減速して停止
+	}
+);
+
+$("#move_box_bottom").animate(
+	{
+		"marginLeft" : "600px"
+	},
+	{
+		duration: 1500,	//最後に「,」（カンマ）を忘れずに入れる
+		easing: "linear"	//通常移動（加減速の変化なし）
+	}
+);
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div id="move_box_top" style="background-color : #555"></div>
+<div id="move_box_bottom" style="background-color : #f00"></div>
+</body>
+</html>

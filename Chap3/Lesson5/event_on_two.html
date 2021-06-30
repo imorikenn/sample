@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_on_two.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//複数イベント指定：イベント名はスペース区切りで複数指定可能
+	$("#click_btn").on("change keypress", function(){
+		alert("イベントが実行されました");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<select id="click_btn">
+	<option value="Microsoft">Microsoft</option>
+	<option value="Google">Google</option>
+	<option value="Amazon">Amazon</option>
+</select>
+</body>
+</html>

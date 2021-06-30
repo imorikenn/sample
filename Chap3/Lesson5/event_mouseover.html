@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_mouseover.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//id="click_btn"をマウスオーバーした場合に実行
+	$("#click_btn").mouseover(function(){
+		alert("マウスオーバー");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<button id="click_btn">ここをマウスオーバーする</button>
+</body>
+</html>

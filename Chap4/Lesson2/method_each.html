@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>method_each.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//P要素（タグ）の数だけ処理をする
+$("#one > p").each(function() {
+	var txt = "<p>" + $(this).text() + '</p>';	//対象の要素内文字列を取得して"<p>"タグを付与
+	$("#two").append( txt );	//div要素id="two"に"<p>文字列</p>"を追加
+	});
+});
+</script>
+</head>
+<body>
+<!-- eachが参照する場所 -->
+<div id="one">
+	<p>１個目のPです。</p>
+	<p>２個目のPです。</p>
+	<p>３個目のPです。</p>
+	<p>４個目のPです。</p>
+	<p>５個目のPです。</p>
+	<p>６個目のPです。</p>
+</div>
+<!-- eachが参照する場所 -->
+
+<!-- データが入ってきます！[赤文字で表示] -->
+<div id="two" style="color:red">
+</div>
+<!--/ データが入ってきます！[赤文字で表示] -->
+</body>
+</html>

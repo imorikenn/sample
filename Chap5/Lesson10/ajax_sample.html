@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax_sample.html</title>
+<style>
+section{padding:10px;width:840px;background-color:rgba(0,0,0,0.5);}
+#thumbs { height: 70px;  overflow: hidden;}
+#thumbs img {width: 100px;height: 54px;margin: 20px 7px 0 7px; cursor: pointer;}
+#thumbs img.selected { opacity: 0.8;alpha(opacity=80);}
+</style>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+////この中に処理を記述 開始
+
+//****************************************************************
+//A．Ajax通信 開始(ver1.8...)
+//****************************************************************
+var request = $.ajax({
+	type: 'GET',	//GET、POST
+	url: "ajax_data.json",
+	cache:false,	//初期値はtrueでキャッシュする状態
+	dataType: 'jsonp',	//text, html, xml, json, jsonp, script
+	jsonpCallback: 'jsonp_data',
+	timeout: 3000
+});
+
+//****************************************************************
+//B．Ajax成功後処理
+//****************************************************************
+request.done(function(data) {
+	console.log("----done.通信処理OK----");
+	//パース処理
+	var len = data.length; 	//データの個数を取得
+	for(var i=0; i<len; i++){	//データの個数分、繰り返し処理
+		$("#thumbs").append('<img src="img/'+data[i].src+'" alt="'+data[i].alt+'">');	//個数分IMGタグをHTML内に追加
+	}
+});
+
+//****************************************************************
+//C．Ajaxエラー処理
+//****************************************************************
+request.fail(function() {
+	console.log("----fail.通信処理NG----");
+});
+
+//****************************************************************
+//D．Ajax通信完了後処理
+//****************************************************************
+request.always(function() {
+	console.log("----always.通信処理完了----");
+	//最初の1回だけ動作するクリックイベント
+	$("#thumbs img").one("click",function(){
+		$("#links").show(1000);
+	});
+	//サムネイルクリック：画像切り替え処理
+	$("#thumbs img").on("click",function(){
+		var img_src = $(this).attr("src");
+		var img_alt = $(this).attr("alt");
+		$("#lage_img").attr("src",img_src).attr("alt",img_alt);
+		$("#select_img").html(img_src + img_alt);
+	});
+});
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<header>ImageSelector</header>
+<main>
+<section>
+	<!-- 選択した画像を表示 -->
+	<div><img id="lage_img" src="" alt=""></div>
+	<!--/ 選択した画像を表示 -->
+
+	<!-- IMGが挿入される場所 -->
+	<div id="thumbs"></div>
+	<!--/ IMGが挿入される場所 -->
+</section>
+</main>
+<footer>フッター［現在選択している画像は：<span id="select_img"></span>］</footer>
+</body>
+</html>

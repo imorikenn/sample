@@ -1,0 +1,32 @@
+jsonp_data(
+[
+    {
+		"src":"l1.png",
+		"alt":"l1です。"
+    },
+    {
+		"src":"l2.png",
+		"alt":"l2です。"
+    },
+    {
+		"src":"l3.png",
+		"alt":"l3です。"
+    },
+    {
+		"src":"l4.png",
+		"alt":"l4です。"
+    },
+    {
+		"src":"l5.png",
+		"alt":"l5です。"
+    },
+    {
+		"src":"l6.png",
+		"alt":"l6です。"
+    },
+    {
+		"src":"l7.png",
+		"alt":"l7です。"
+    }
+]
+);

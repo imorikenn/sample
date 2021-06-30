@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex_tabslet_after.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<script src="./Tabslet-master/jquery.tabslet.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+$('.after_event').tabslet({
+	animation: true	//アニメーションフラグ［ON=true、OFF=false］
+});
+$('.after_event').on("_after", function() {
+	// 切り替わった後に行う処理を記述
+	alert("コンテンツ切り替わった後にアラートを表示");
+});
+
+//この中に処理を記述 終了
+});
+</script>
+<link rel="stylesheet" href="./Tabslet-master/demo/stylesheets/reset.css">
+<link rel="stylesheet" href="./Tabslet-master/demo/stylesheets/styles.css">
+<link rel="stylesheet" href="./Tabslet-master/demo/stylesheets/typography.css">
+</head>
+<body>
+<h1>Tabslet_after</h1>
+<!-- Tabslet -->
+<h2>Custom event "_after"</h2>
+<div class='tabs after_event'>
+	<ul class='horizontal'>
+		<li><a href="#tab-1">コンテンツ１</a></li>
+		<li><a href="#tab-2">コンテンツ２</a></li>
+		<li><a href="#tab-3">コンテンツ３</a></li>
+	</ul>
+	<div id='tab-1'><h3>コンテンツ１を選択。</h3></div>
+	<div id='tab-2'><h3>コンテンツ２を選択。</h3></div>
+	<div id='tab-3'><h3>コンテンツ３を選択。</h3></div>
+</div>
+<!-- Tabslet -->	
+</body>
+</html>

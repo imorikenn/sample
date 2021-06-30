@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>method_trigger.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//表示ボタンをクリックした場合
+	$("#show_btn").on("click",function(){
+		$("#hide_area1").show();	//即座に表示
+		$("#hide_area2").show('slow');	//スローで表示
+		$("#hide_area3").show(2000);	//5秒かけて表示
+	});
+	//非表示ボタンをクリックした場合
+	$("#hide_btn").on("click",function(){
+		$("#hide_area1").hide();	//即座に非表示
+		$("#hide_area2").hide('slow');	//スローで非表示
+		$("#hide_area3").hide(2000);	//2秒かけて非表示
+	});
+	//トリガーメソッドを使うと上記のようなクリックイベント等を実行できるようになる
+	$("#show_btn").trigger("click");	//表示ボタンをクリック
+//この中に処理を記述 終了
+});
+</script>
+<style>
+div{float: left;}
+#hide_area1{display: none; width: 300px; height: 300px; background-color: #5ab270;}
+#hide_area2{display: none; width: 300px; height: 300px; background-color: #e53131;}
+#hide_area3{display: none; width: 300px; height: 300px; background-color: #987cff;}
+</style>
+</head>
+<body>
+<div><button id="show_btn">表示</button>　<button id="hide_btn">非表示</button></div>
+<div id="hide_area1"></div>
+<div id="hide_area2">’slow’</div>
+<div id="hide_area3">2秒</div>
+</body>
+</html>

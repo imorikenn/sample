@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>event_blur.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	//セレクタからフォーカスが外れたタイミングで処理を実行
+	$("#name").blur(function(){
+		alert("名前からフォーカスが外れました。");
+	});
+	$("#email").blur(function(){
+		alert("Emailからフォーカスが外れました。");
+	});
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<p>名前：<input type="text" id="name" value="フォーカスが外れると実行"></p>
+<p>Email：<input type="text" id="email" value="フォーカスが外れると実行"></p>
+</body>
+</html>

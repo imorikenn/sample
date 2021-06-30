@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>method_fadein.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	$("#show_area1").fadeIn();	//即座に表示
+	$("#show_area2").fadeIn('slow');	//スローで表示
+	$("#show_area3").fadeIn(5000);	//5秒かけて表示
+//この中に処理を記述 終了
+});
+</script>
+<style>
+div{float: left; width: 300px; height: 300px; display: none;}
+#show_area1{background-color: #5ab270;}
+#show_area2{background-color: #e53131;}
+#show_area3{background-color: #987cff;}
+</style>
+</head>
+<body>
+<div id="show_area1"></div>
+<div id="show_area2">’slow’</div>
+<div id="show_area3">5秒</div>
+</body>
+</html>

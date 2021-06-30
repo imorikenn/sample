@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>method_write3-1.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+	alert($("#setumei").val());	//入力フォーム等はval();で取得
+	alert($("#setumei2").val());	//入力フォーム等はval();で取得
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<p>
+	１．<input type="text" id="setumei" value="外国人が知っている日本の地名">
+</p>
+<p>
+	２．<select id="setumei2" name="setumei2">
+		<option value="北海道">北海道</option>
+		<option value="東京" selected>東京</option>
+		<option value="大阪">大阪</option>
+	</select>
+</p>
+</body>
+</html>

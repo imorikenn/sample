@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selecter2.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//$("name属性=name属性値")に対してstyle="color:#f00;"を設定
+$("[name=test]").css("color","#f00");	//文字を赤色に
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<!-- name=testにのみ、赤色のスタイルが設定される -->
+<div name="test"> 
+	<p>これはname属性”test”の子要素。</p>
+	<p>これはname属性”test”の子要素。</p>
+	<p>これはname属性”test”の子要素。</p>
+	<p>これはname属性”test”の子要素。</p>
+</div>
+<!-- name=demoには、赤色のスタイルが設定されない -->
+<div name="demo"> 
+	<p>これはname属性”demo”の子要素。</p>
+	<p>これはname属性”demo”の子要素。</p>
+	<p>これはname属性”demo”の子要素。</p>
+	<p>これはname属性”demo”の子要素。</p>
+</div>
+</body>
+</html>

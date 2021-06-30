@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>body{overflow: hidden;}</style>
+<title>ex_slidrjs.html</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="slidr-master/slidr.min.js"></script>
+<script>
+$(document).ready(function(){
+//この中に処理を記述 開始
+
+//slidr.jsの表示設定
+var s = slidr.create('slidr-img', {
+	breadcrumbs: true,	//画像選択ボタン
+	controls: 'corner',	//corner or border
+	direction: 'v',	//h or v
+	fade: true,	//fade in or out
+	keyboard: true,	//キーボード操作
+	overflow: true,
+	pause: false,
+	theme: '#222',
+	timing: { 'cube': '0.5s ease-in' },
+	touch: true,
+	transition: 'cube'
+	});
+	//imgタグのdata-slidrと連動：縦・横のスライドを選択して設定可能
+	s.add('h', ['A1', 'A2', 'A3'], 'fade');	//横で使用するスライドを指定
+	s.add('v', ['A1', 'A2', 'A3', 'A4', 'A5'], 'cube');	//縦で使用するスライドを指定
+	// Now start.
+	s.start();
+
+//この中に処理を記述 終了
+});
+</script>
+</head>
+<body>
+<div id="content">
+<h1>slidr.jsライブラリ</h1>
+<!-- スクロール横画像 -->
+<div style="width:600px;">
+<div id="slidr-img" style="display: inline-block">
+	<img data-slidr="A1" src="slidr-master/sample_img/1.jpg">
+	<img data-slidr="A2" src="slidr-master/sample_img/2.jpg">
+	<img data-slidr="A3" src="slidr-master/sample_img/3.jpg">
+	<img data-slidr="A4" src="slidr-master/sample_img/4.jpg">
+	<img data-slidr="A5" src="slidr-master/sample_img/5.jpg">
+</div>
+</div>
+<!-- スクロール横画像 -->
+</div>
+</body>
+</html>
